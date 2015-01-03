@@ -1,0 +1,10 @@
+{
+  "name": "zefti-data-sources",
+  "description": "Zefti Data Sources",
+  "author": "Ryan Ogle",
+  "dependencies": {
+    "underscore" : "latest"
+  },
+  "private": false,
+  "version": "0.0.1"
+}
