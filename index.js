@@ -12,11 +12,9 @@ var readySources = {};
 
 module.exports = function(dataSources){
   for (var dataSource in dataSources) {
-    console.log(dataSource);
     if (!readySources[dataSource]) {
       readySources[dataSource] = originSources[dataSources[dataSource].type](dataSources[dataSource])
     }
   }
-  console.log(readySources.config);
   return readySources;
 }
