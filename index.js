@@ -1,9 +1,11 @@
 var mongo = require('zefti-mongo');
 var redis = require('zefti-redis');
 var remote = require('zefti-remote');
+var dynamo = require('zefti-dynamo');
 
 var originSources = {
-    mongo : mongo
+    dynamo : dynamo
+  , mongo : mongo
   , redis : redis
   , remote : remote
 };
