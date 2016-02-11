@@ -16,10 +16,12 @@ var originSources = {
 
 var readySources = {};
 
-module.exports = function(dataSources){
+module.exports = function(options){
+  var dataSources = options.dataSources;
+
   for (var dataSource in dataSources) {
     if (!readySources[dataSource]) {
-      readySources[dataSource] = originSources[dataSources[dataSource].type](dataSources[dataSource])
+      readySources[dataSource] = originSources[dataSources[dataSource].type]({dataSource:dataSources[dataSource], logger: null})
     }
   }
   return readySources;
